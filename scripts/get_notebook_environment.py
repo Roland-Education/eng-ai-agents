@@ -7,7 +7,7 @@ from pathlib import Path
 import yaml
 
 
-def get_notebook_environment(notebook_path: str, registry_path: str = "notebooks/stripped-notebooks.yml") -> str:
+def get_notebook_environment(notebook_path: str, registry_path: str = "notebooks/notebook-database.yml") -> str:
     """
     Get the Docker environment for a notebook from the registry.
 
@@ -39,7 +39,7 @@ def get_notebook_environment(notebook_path: str, registry_path: str = "notebooks
         if entry == "---":
             continue
 
-        stripped = entry.get("stripped", "")
+        stripped = entry.get("notebook", "")
         if stripped == search_path:
             environment = entry.get("environment")
             if not environment:

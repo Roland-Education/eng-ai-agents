@@ -183,8 +183,15 @@ runs/
 *.tar.xz
 datasets/*
 
+# Weights & Biases
+wandb/
+
 .uv-cache
 
 install/
 log/
 .colcon/
+
+# Dolt database files (added by bd init)
+.dolt/
+*.db

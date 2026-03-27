@@ -1,3 +1,8 @@
+# Stray notebook execution artifacts in repo root
+/*.png
+/*.jpg
+/*.jpeg
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -183,8 +188,15 @@ runs/
 *.tar.xz
 datasets/*
 
+# Weights & Biases
+wandb/
+
 .uv-cache
 
 install/
 log/
 .colcon/
+
+# Dolt database files (added by bd init)
+.dolt/
+*.db
